@@ -3,7 +3,7 @@ package leetcode
 import "sort"
 
 func longestCommonPrefix(strs []string) string {
-    sLen := len(strs)
+	sLen := len(strs)
 	var cPrefix string
 	if sLen == 0 {
 		return cPrefix
@@ -29,4 +29,3 @@ func longestCommonPrefix(strs []string) string {
 
 	return cPrefix
 }
-

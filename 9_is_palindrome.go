@@ -1,17 +1,14 @@
 package leetcode
 
 func isPalindrome(x int) bool {
-    if x < 0 {
+	if x < 0 {
 		return false
 	}
 	var tmp, target int
 	tmp = x
 	for tmp != 0 {
 		target = target*10 + tmp%10
-		tmp = tmp/10
+		tmp = tmp / 10
 	}
-	if x == target {
-		return true
-	}
-	return false
+	return x == target
 }

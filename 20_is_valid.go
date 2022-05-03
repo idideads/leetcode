@@ -1,8 +1,8 @@
 package leetcode
 
 func isValid(s string) bool {
-    //括号对应的int32的值：`(`=40, `)`=41, `[`=91, `]`=93, `{`=123, `}`=125
-	bMap := map[int32]int32{40:41, 91:93, 123:125}
+	//括号对应的int32的值：`(`=40, `)`=41, `[`=91, `]`=93, `{`=123, `}`=125
+	bMap := map[int32]int32{40: 41, 91: 93, 123: 125}
 	l := len(s)
 	if l == 0 || l%2 != 0 {
 		return false //空串或奇数个括号直接返回false
@@ -16,5 +16,5 @@ func isValid(s string) bool {
 			stack = append(stack, v) //否则，压栈
 		}
 	}
-	return len(stack)==0 //最后判断栈的元素个数，为0表示括号匹配成功
+	return len(stack) == 0 //最后判断栈的元素个数，为0表示括号匹配成功
 }
