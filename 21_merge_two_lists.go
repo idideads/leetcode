@@ -7,10 +7,7 @@ package leetcode
 *	输入：l1 = [], l2 = [0]					输出：[0]
  */
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+
 
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	// 用一个切片保存遍历的顺序

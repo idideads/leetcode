@@ -19,7 +19,7 @@ func addBinary(a string, b string) string {
 	} else {
 		longestSize = bLength + 1
 	}
-	abytes, bbytes, rbytes = make([]byte, longestSize-aLength, longestSize), make([]byte, longestSize-bLength, longestSize), make([]byte, longestSize, longestSize)
+	abytes, bbytes, rbytes = make([]byte, longestSize-aLength, longestSize), make([]byte, longestSize-bLength, longestSize), make([]byte, longestSize)
 	for i, _ := range abytes {
 		abytes[i] = '0'
 	}
