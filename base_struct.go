@@ -8,7 +8,7 @@ type ListNode struct {
 
 // TreeNode is a binary tree
 type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
+	Val   int       `json:"val"`
+	Left  *TreeNode `json:"left"`
+	Right *TreeNode `json:""right`
 }
