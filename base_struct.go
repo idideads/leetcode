@@ -10,5 +10,5 @@ type ListNode struct {
 type TreeNode struct {
 	Val   int       `json:"val"`
 	Left  *TreeNode `json:"left"`
-	Right *TreeNode `json:""right`
+	Right *TreeNode `json:"right"`
 }
