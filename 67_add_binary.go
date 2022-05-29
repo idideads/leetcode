@@ -20,10 +20,10 @@ func addBinary(a string, b string) string {
 		longestSize = bLength + 1
 	}
 	abytes, bbytes, rbytes = make([]byte, longestSize-aLength, longestSize), make([]byte, longestSize-bLength, longestSize), make([]byte, longestSize)
-	for i, _ := range abytes {
+	for i := range abytes {
 		abytes[i] = '0'
 	}
-	for i, _ := range bbytes {
+	for i := range bbytes {
 		bbytes[i] = '0'
 	}
 	abytes, bbytes = append(abytes, []byte(a)...), append(bbytes, []byte(b)...)
