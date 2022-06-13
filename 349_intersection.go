@@ -1,7 +1,7 @@
 package leetcode
 
-func intersection(nums1 []int, nums2 []int) []int {
-    intersectionMap := make(map[int]bool)
+func intersection(nums1, nums2 []int) []int {
+	intersectionMap := make(map[int]bool)
 	for _, n := range nums1 {
 		intersectionMap[n] = false
 	}
