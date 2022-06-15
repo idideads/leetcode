@@ -1,11 +1,12 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_longestCommonPrefix(t *testing.T) {
-	strs := []string{"flower","flow","flight"}
-	fmt.Println(longestCommonPrefix(strs))
+	require.Equal(t, "fl", longestCommonPrefix([]string{"flower", "flow", "flight"}))
+	require.Empty(t, longestCommonPrefix([]string{"dog", "racecar", "car"}))
 }

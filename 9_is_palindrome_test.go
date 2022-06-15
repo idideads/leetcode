@@ -1,11 +1,11 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
-func Test_isPalindrome(t *testing.T) {
-	x := 121
-	fmt.Printf("%v\n", isPalindrome(x))
+func Test_isPalindromeInt(t *testing.T) {
+	require.Equal(t, true, isPalindromeInt(121))
 }

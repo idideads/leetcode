@@ -1,12 +1,12 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_twoSum(t *testing.T) {
 	nums := []int{2, 7, 11, 15}
-	result := twoSum(nums, 9)
-	fmt.Printf("%v\n", result)
+	require.EqualValues(t, []int{0, 1}, twoSum(nums, 9))
 }
