@@ -1,11 +1,11 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_isValid(t *testing.T) {
-	s:="()[]{}"
-	fmt.Println(isValid(s))
+	require.Equal(t, true, isValid("()[]{}"))
 }

@@ -1,8 +1,9 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_mergeTwoLists(t *testing.T) {
@@ -11,20 +12,6 @@ func Test_mergeTwoLists(t *testing.T) {
 	l2_1, l2_2, l2_3 := &ListNode{Val: 1}, &ListNode{Val: 3}, &ListNode{Val: 4}
 	l2_1.Next, l2_2.Next = l2_2, l2_3
 
-	var l3,l4 *ListNode
-	// l3 = &ListNode{Val: 0}
-	fmt.Printf("%p\t%v\n",l3,l3)
-	fmt.Println("------------------------------------------------------")
-
-	l := mergeTwoLists(l1_1, l2_1)
-	for l != nil {
-		fmt.Printf("%p\t%d\t%p\n", l, l.Val, l.Next)
-		l = l.Next
-	}
-	fmt.Println("------------------------------------------------------")
-	l1 := mergeTwoLists(l3, l4)
-	for l1 != nil {
-		fmt.Printf("%p\t%d\t%p\n", l1, l1.Val, l1.Next)
-		l1 = l1.Next
-	}
+	require.NotNil(t, mergeTwoLists(l1_1, l2_1))
+	require.EqualValues(t, []int{1, 1, 2, 3, 4, 4}, ListToSlice(mergeTwoLists(l1_1, l2_1)))
 }

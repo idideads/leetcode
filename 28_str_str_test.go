@@ -1,12 +1,12 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_strStr(t *testing.T) {
-	haystack, needle := "aa", "aa"
-	startPosition := strStr(haystack, needle)
-	fmt.Printf("startPosition is %d\n", startPosition)
+	require.Equal(t, 2, strStr("hello", "ll"))
+	require.Equal(t, -1, strStr("aaaaa", "bba"))
 }

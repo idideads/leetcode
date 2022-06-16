@@ -15,7 +15,7 @@ package leetcode
 */
 func mySqrt(x int) int {
 	sqrt := 0
-	for i := 1; i*i < x; i++ {
+	for i := 1; i*i <= x; i++ {
 		sqrt = i
 	}
 	return sqrt

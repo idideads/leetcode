@@ -10,7 +10,7 @@ package leetcode
 输入: a = "1010", b = "1011"
 输出: "10101"
 */
-func addBinary(a string, b string) string {
+func addBinary(a, b string) string {
 	aLength, bLength := len(a), len(b)
 	var abytes, bbytes, rbytes []byte
 	longestSize := 0
