@@ -1,20 +1,14 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_deleteDuplicates(t *testing.T) {
-	listNode_5 := &ListNode{Val: 7, Next: nil}
-	listNode_4 := &ListNode{Val: 3, Next: listNode_5}
-	listNode_3 := &ListNode{Val: 3, Next: listNode_4}
-	listNode_2 := &ListNode{Val: 1, Next: listNode_3}
-	listNode_1 := &ListNode{Val: 1, Next: listNode_2}
-	head := deleteDuplicates(listNode_1)
-	for head.Next != nil {
-		fmt.Printf("addr:%p\tval:%d\tnext:%p\n", head, head.Val, head.Next)
-		head = head.Next
-	}
-	fmt.Printf("addr:%p\tval:%d\tnext:%p\n", head, head.Val, head.Next)
+	head := &ListNode{1, &ListNode{1, &ListNode{3, &ListNode{3, &ListNode{5, &ListNode{5, &ListNode{7, &ListNode{7, &ListNode{11, nil}}}}}}}}}
+	head = deleteDuplicates(head)
+	require.NotNil(t, head)
+	require.EqualValues(t, []int{1, 3, 5, 7, 11}, ListToSlice(head))
 }

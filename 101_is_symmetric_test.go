@@ -1,8 +1,9 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_isSymmetric(t *testing.T) {
@@ -26,7 +27,7 @@ func Test_isSymmetric(t *testing.T) {
 
 	tn1 := &TreeNode{Val: 1, Left: ltn2, Right: rtn2}
 
-	fmt.Println(isSymmetric(tn1))
+	require.Equal(t, true, isSymmetric(tn1))
 }
 
 func Test_isMirror(t *testing.T) {
@@ -48,5 +49,5 @@ func Test_isMirror(t *testing.T) {
 	rtn4 := &TreeNode{Val: 4, Left: rtn8, Right: rtn7}
 	rtn2 := &TreeNode{Val: 2, Left: rtn4, Right: rtn3}
 
-	fmt.Println(isMirror(ltn2, rtn2))
+	require.Equal(t, true, isMirror(ltn2, rtn2))
 }

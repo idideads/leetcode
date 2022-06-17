@@ -1,8 +1,9 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_hasCycle(t *testing.T) {
@@ -12,5 +13,5 @@ func Test_hasCycle(t *testing.T) {
 	listNode_2 := &ListNode{Val: 2, Next: listNode_3}
 	listNode_1 := &ListNode{Val: 1, Next: listNode_2}
 	listNode_5.Next = listNode_2
-	fmt.Println(hasCycle(listNode_1))
+	require.Equal(t, true, hasCycle(listNode_1))
 }

@@ -10,6 +10,15 @@ import "sort"
 输出: 4
 */
 func singleNumber(nums []int) int {
+	l := len(nums)
+	sigNum := nums[0]
+	for i := 1; i < l; i++ {
+		sigNum ^= nums[i]
+	}
+	return sigNum
+}
+
+func singleNumber2(nums []int) int {
 	size := len(nums)
 	if size == 1 {
 		return nums[0]

@@ -1,18 +1,19 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_isSameTree(t *testing.T) {
-	l1 := &TreeNode{Val: 2}
-	r1 := &TreeNode{Val: 3}
-	root1 := &TreeNode{Val: 1, Left: l1, Right: r1}
-
-	l2 := &TreeNode{Val: 2}
-	r2 := &TreeNode{Val: 3}
-	root2 := &TreeNode{Val: 1, Left: l2, Right: r2}
-
-	fmt.Println(isSameTree(root1, root2))
+	root1 := &TreeNode{1,
+		&TreeNode{2, &TreeNode{4, nil, nil}, &TreeNode{5, &TreeNode{8, nil, nil}, &TreeNode{9, nil, nil}}},
+		&TreeNode{3, &TreeNode{6, &TreeNode{10, nil, nil}, &TreeNode{11, nil, nil}}, &TreeNode{7, nil, nil}},
+	}
+	root2 := &TreeNode{1,
+		&TreeNode{2, &TreeNode{4, nil, nil}, &TreeNode{5, &TreeNode{8, nil, nil}, &TreeNode{9, nil, nil}}},
+		&TreeNode{3, &TreeNode{6, &TreeNode{10, nil, nil}, &TreeNode{11, nil, nil}}, &TreeNode{7, nil, nil}},
+	}
+	require.Equal(t, true,isSameTree(root1, root2))
 }
