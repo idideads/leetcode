@@ -7,6 +7,11 @@ import (
 )
 
 func Test_findTheDifference(t *testing.T) {
-	require.Equal(t, 'e', findTheDifference("abcd", "abcde"))
-	require.Equal(t, 'y', findTheDifference("", "y"))
+	got := findTheDifference("abcd", "abcde")
+	var want byte = 'e'
+	require.Equal(t, want, got)
+
+	want = 'y'
+	got = findTheDifference("", "y")
+	require.Equal(t, want, got)
 }
