@@ -1,15 +1,14 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_generate(t *testing.T) {
-	fmt.Println(generate(1))
-	fmt.Println(generate(2))
-	fmt.Println(generate(3))
-	fmt.Println(generate(4))
-	fmt.Println(generate(5))
-	fmt.Println(generate(6))
+	got := generate(5)
+	require.NotNil(t, got)
+	want := [][]int{{1}, {1, 1}, {1, 2, 1}, {1, 3, 3, 1}, {1, 4, 6, 4, 1}}
+	require.EqualValues(t, want, got)
 }

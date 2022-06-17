@@ -1,14 +1,13 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_getRow(t *testing.T) {
-	fmt.Println(getRow(0))
-	fmt.Println(getRow(1))
-	fmt.Println(getRow(2))
-	fmt.Println(getRow(3))
-	fmt.Println(getRow(4))
+	got := getRow(4)
+	require.NotNil(t, got)
+	require.EqualValues(t, []int{1, 4, 6, 4, 1}, got)
 }
