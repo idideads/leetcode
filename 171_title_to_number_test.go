@@ -1,13 +1,13 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_titleToNumber(t *testing.T) {
-	fmt.Println(titleToNumber("A"))
-	fmt.Println(titleToNumber("Z"))
-	fmt.Println(titleToNumber("AA"))
-	fmt.Println(titleToNumber("AB"))
+	require.Equal(t, 1, titleToNumber("A"))
+	require.Equal(t, 28, titleToNumber("AB"))
+	require.Equal(t, 701, titleToNumber("ZY"))
 }

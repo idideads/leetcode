@@ -1,8 +1,9 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_getIntersectionNode(t *testing.T) {
@@ -14,5 +15,6 @@ func Test_getIntersectionNode(t *testing.T) {
 	bln2 := &ListNode{Val: 1, Next: ln0}
 	bln1 := &ListNode{Val: 6, Next: bln2}
 	bln0 := &ListNode{Val: 5, Next: bln1}
-	fmt.Println(getIntersectionNode(aln0, bln0).Val)
+	require.NotNil(t, getIntersectionNode(aln0, bln0))
+	require.Equal(t, ln0, getIntersectionNode(aln0, bln0))
 }

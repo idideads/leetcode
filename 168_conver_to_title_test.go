@@ -1,19 +1,14 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_convertToTitle(t *testing.T) {
-	columnNumber := 1
-	fmt.Println(convertToTitle(columnNumber))
-	columnNumber = 28
-	fmt.Println(convertToTitle(columnNumber))
-	columnNumber = 52
-	fmt.Println(convertToTitle(columnNumber))
-	columnNumber = 701
-	fmt.Println(convertToTitle(columnNumber))
-	columnNumber = 2147483647
-	fmt.Println(convertToTitle(columnNumber))
+	require.Equal(t, "A", convertToTitle(1))
+	require.Equal(t, "AB", convertToTitle(28))
+	require.Equal(t, "ZY", convertToTitle(701))
+	require.Equal(t, "FXSHRXW", convertToTitle(2147483647))
 }

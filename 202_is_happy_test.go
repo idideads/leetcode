@@ -1,11 +1,12 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_isHappy(t *testing.T) {
-	fmt.Println(isHappy(2))
-	fmt.Println(isHappy(19))
+	require.Equal(t, true, isHappy(19))
+	require.Equal(t, false, isHappy(2))
 }
