@@ -1,14 +1,14 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_isPalindromeList(t *testing.T) {
-	ln3 := &ListNode{Val: 1}
-	ln2 := &ListNode{Val: 2, Next: ln3}
-	ln1 := &ListNode{Val: 2, Next: ln2}
-	head := &ListNode{Val: 1, Next: ln1}
-	fmt.Println(isPalindromeList(head))
+	head := &ListNode{1, &ListNode{2, &ListNode{2, &ListNode{1, nil}}}}
+	require.Equal(t, true, isPalindromeList(head))
+	head = &ListNode{1, &ListNode{3, &ListNode{5, nil}}}
+	require.Equal(t, false, isPalindromeList(head))
 }

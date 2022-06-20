@@ -1,8 +1,9 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_reverseList(t *testing.T) {
@@ -12,9 +13,6 @@ func Test_reverseList(t *testing.T) {
 	ln1 := &ListNode{Val: 2, Next: ln2}
 	head := &ListNode{Val: 1, Next: ln1}
 	head = reverseList(head)
-	for head.Next != nil {
-		fmt.Printf("%d->", head.Val)
-		head = head.Next
-	}
-	fmt.Printf("%d\n", head.Val)
+	require.NotNil(t, head)
+	require.EqualValues(t, []int{5, 4, 3, 2, 1}, ListToSlice(head))
 }

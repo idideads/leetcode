@@ -1,13 +1,12 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_isPowerOfTwo(t *testing.T) {
-	fmt.Println(isPowerOfTwo(1))
-	fmt.Println(isPowerOfTwo(2))
-	fmt.Println(isPowerOfTwo(4))
-	fmt.Println(isPowerOfTwo(6))
+	require.Equal(t, false, isPowerOfTwo(6))
+	require.Equal(t, true, isPowerOfTwo(8))
 }

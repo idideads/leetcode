@@ -1,19 +1,20 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_invertTree(t *testing.T) {
-	tn3 := &TreeNode{Val: 3}
-	tn5 := &TreeNode{Val: 5}
-	tn4 := &TreeNode{Val: 4, Left: tn3, Right: tn5}
-	tn0 := &TreeNode{Val: 0}
-	tn7 := &TreeNode{Val: 7}
-	tn9 := &TreeNode{Val: 9}
-	tn2 := &TreeNode{Val: 2, Left: tn0, Right: tn4}
-	tn8 := &TreeNode{Val: 8, Left: tn7, Right: tn9}
-	tn6 := &TreeNode{Val: 6, Left: tn2, Right: tn8}
-	fmt.Println(preorderTraversal(invertTree(tn6)))
+	root := &TreeNode{Val: 4,
+		Left:  &TreeNode{Val: 2, Left: &TreeNode{Val: 1}, Right: &TreeNode{Val: 3}},
+		Right: &TreeNode{Val: 7, Left: &TreeNode{Val: 6}, Right: &TreeNode{Val: 9}},
+	}
+	root = invertTree(root)
+	require.NotNil(t, root)
+	require.EqualValues(t, []int{4, 7, 9, 6, 2, 3, 1}, preorderTraversal(root))
+	root = invertTree(root)
+	require.NotNil(t, root)
+	require.EqualValues(t, []int{4, 2, 1, 3, 7, 6, 9}, preorderTraversal(root))
 }
