@@ -1,8 +1,9 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_lowestCommonAncestor(t *testing.T) {
@@ -15,6 +16,8 @@ func Test_lowestCommonAncestor(t *testing.T) {
 	tn2 := &TreeNode{Val: 2, Left: tn0, Right: tn4}
 	tn8 := &TreeNode{Val: 8, Left: tn7, Right: tn9}
 	tn6 := &TreeNode{Val: 6, Left: tn2, Right: tn8}
-	fmt.Println(lowestCommonAncestor(tn6, tn0, tn9))
-	fmt.Println(lowestCommonAncestor(tn6, tn0, tn5))
+
+	require.NotNil(t, lowestCommonAncestor(tn6, tn0, tn9))
+	require.Equal(t, tn6, lowestCommonAncestor(tn6, tn0, tn9))
+	require.Equal(t, tn2, lowestCommonAncestor(tn6, tn0, tn5))
 }

@@ -1,8 +1,9 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_deleteNode(t *testing.T) {
@@ -10,10 +11,7 @@ func Test_deleteNode(t *testing.T) {
 	ln2 := &ListNode{Val: 1, Next: ln3}
 	ln1 := &ListNode{Val: 5, Next: ln2}
 	ln0 := &ListNode{Val: 4, Next: ln1}
+
 	deleteNode(ln2)
-	for ln0.Next != nil {
-		fmt.Printf("%d->", ln0.Val)
-		ln0 = ln0.Next
-	}
-	fmt.Printf("%d\n", ln0.Val)
+	require.EqualValues(t, []int{4, 5, 9}, ListToSlice(ln0))
 }
