@@ -5,18 +5,6 @@ package leetcode
 注意：若 s 和 t 中每个字符出现的次数都相同，则称 s 和 t 互为字母异位词。
 */
 func isAnagram(s, t string) bool {
-	lengthS, lengthT := len(s), len(t)
-	if lengthS != lengthT {
-		return false
-	}
-	char := s[0] ^ t[0]
-	for i := 1; i < lengthS; i++ {
-		char = char ^ s[i] ^ t[i]
-	}
-	return char == 0
-}
-
-func isAnagramByMap(s, t string) bool {
 	size, size2 := len(s), len(t)
 	if size != size2 {
 		return false

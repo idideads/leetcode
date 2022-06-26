@@ -11,7 +11,3 @@ func Test_isAnagram(t *testing.T) {
 	require.Equal(t, false, isAnagram("bat", "cat"))
 	require.Equal(t, false, isAnagram("aa", "bb"))
 }
-
-func Test_isAnagramByMap(t *testing.T) {
-	require.Equal(t, true, isAnagramByMap("qwerty", "ytrewq"))
-}
