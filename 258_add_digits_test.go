@@ -1,11 +1,12 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_addDigits(t *testing.T) {
-	fmt.Println(addDigits(0))
-	fmt.Println(addDigits(38))
+	require.Equal(t, 0, addDigits(0))
+	require.Equal(t, 2, addDigits(38))
 }

@@ -1,11 +1,12 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_wordPattern(t *testing.T) {
-	pattern, str := "abba", "dog dog dog dog"
-	fmt.Println(wordPattern(pattern, str))
+
+	require.Equal(t, false, wordPattern("abba", "dog dog dog dog"))
 }

@@ -1,10 +1,11 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_canWinNim(t *testing.T) {
-	fmt.Println(canWinNim(25))
+	require.Equal(t, true, canWinNim(25))
 }

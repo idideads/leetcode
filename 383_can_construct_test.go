@@ -1,11 +1,12 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_canConstruct(t *testing.T) {
 	ransomNote, magazine := "aaa", "aabbs"
-	fmt.Println(canConstruct(ransomNote, magazine))
+	require.Equal(t, false, canConstruct(ransomNote, magazine))
 }

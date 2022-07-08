@@ -1,12 +1,13 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_guessNumber(t *testing.T) {
-	fmt.Println(guessNumber(4))
-	fmt.Println(guessNumber(6))
-	fmt.Println(guessNumber(13))
+	require.Equal(t, 4, guessNumber(4))
+	require.Equal(t, 6, guessNumber(6))
+	require.Equal(t, 6, guessNumber(13))
 }

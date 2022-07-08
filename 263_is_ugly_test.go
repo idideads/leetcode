@@ -1,12 +1,13 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_isUgly(t *testing.T) {
-	fmt.Println(isUgly(1))
-	fmt.Println(isUgly(6))
-	fmt.Println(isUgly(14))
+	require.Equal(t, true, isUgly(1))
+	require.Equal(t, true, isUgly(6))
+	require.Equal(t, false, isUgly(14))
 }

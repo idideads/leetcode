@@ -1,15 +1,12 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_firstBadVersion(t *testing.T) {
-	fmt.Println(firstBadVersion(6))
-	fmt.Println(firstBadVersion(7))
-	fmt.Println(firstBadVersion(8))
-	fmt.Println(firstBadVersion(10))
-	fmt.Println(firstBadVersion(13))
-	fmt.Println(firstBadVersion(22))
+	require.Equal(t, 6, firstBadVersion(8))
+	require.Equal(t, 6, firstBadVersion(22))
 }

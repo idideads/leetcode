@@ -1,10 +1,11 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_reverseVowels(t *testing.T) {
-	fmt.Println(reverseVowels("leetcode"))
+	require.Equal(t, "leotcede", reverseVowels("leetcode"))
 }

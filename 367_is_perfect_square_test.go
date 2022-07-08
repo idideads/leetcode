@@ -1,12 +1,13 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_isPerfectSquare(t *testing.T) {
-	fmt.Println(isPerfectSquare(4))
-	fmt.Println(isPerfectSquare(18))
-	fmt.Println(isPerfectSquare(19 * 19))
+	require.Equal(t, true, isPerfectSquare(4))
+	require.Equal(t, false, isPerfectSquare(8))
+	require.Equal(t, true, isPerfectSquare(19*19))
 }

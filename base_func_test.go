@@ -11,3 +11,9 @@ func TestListToSlice(t *testing.T) {
 	require.NotNil(t, ListToSlice(head))
 	require.EqualValues(t, []int{1, 2, 3, 4}, ListToSlice(head))
 }
+
+func TestNisPowerOfX(t *testing.T) {
+	require.Equal(t, true, NisPowerOfX(16, 4))
+	require.Equal(t, true, NisPowerOfX(8, 2))
+	require.Equal(t, false, NisPowerOfX(20, 3))
+}

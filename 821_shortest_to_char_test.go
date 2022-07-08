@@ -1,15 +1,15 @@
 package leetcode
 
 import (
-	"fmt"
+
 	// "log"
 	// "reflect"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_shortestToChar(t *testing.T) {
-	answer1 := shortestToChar("baab", 'b')
-	answer2 := shortestToChar("loveleetcodeabc", 'e')
-	fmt.Printf("%v\n", answer1)
-	fmt.Printf("%v\n", answer2)
+	require.EqualValues(t, []int{0, 1, 1, 0}, shortestToChar("baab", 'b'))
+	require.EqualValues(t, []int{3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0, 1, 2, 3}, shortestToChar("loveleetcodeabc", 'e'))
 }
