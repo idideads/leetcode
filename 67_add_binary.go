@@ -13,12 +13,7 @@ package leetcode
 func addBinary(a, b string) string {
 	aLength, bLength := len(a), len(b)
 	var abytes, bbytes, rbytes []byte
-	longestSize := 0
-	if aLength >= bLength {
-		longestSize = aLength + 1
-	} else {
-		longestSize = bLength + 1
-	}
+	longestSize := Max(aLength, bLength) + 1
 	abytes, bbytes, rbytes = make([]byte, longestSize-aLength, longestSize), make([]byte, longestSize-bLength, longestSize), make([]byte, longestSize)
 	for i := range abytes {
 		abytes[i] = '0'

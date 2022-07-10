@@ -5,9 +5,5 @@ func findLUSlength(a string, b string) int {
 		return -1
 	}
 	aLength, bLength := len(a), len(b)
-	if aLength > bLength {
-		return aLength
-	} else {
-		return bLength
-	}
+	return Max(aLength, bLength)
 }

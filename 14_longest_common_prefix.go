@@ -13,12 +13,8 @@ func longestCommonPrefix(strs []string) string {
 	}
 
 	sort.Strings(strs)
-	var minLen int
-	if len(strs[0]) >= len(strs[sLen-1]) {
-		minLen = len(strs[sLen-1])
-	} else {
-		minLen = len(strs[0])
-	}
+
+	minLen := Min(len(strs[0]), len(strs[sLen-1]))
 	for i := 0; i < minLen; i++ {
 		if strs[0][i] == strs[sLen-1][i] {
 			cPrefix += string(strs[0][i])
