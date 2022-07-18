@@ -12,3 +12,9 @@ type TreeNode struct {
 	Left  *TreeNode `json:"left"`
 	Right *TreeNode `json:"right"`
 }
+
+// Node is N fork-tree
+type Node struct {
+	Val      int     `json:"val"`
+	Children []*Node `json:"children"`
+}
